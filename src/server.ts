@@ -70,7 +70,7 @@ export class ChatAgent extends AIChatAgent<Env> {
     const workersai = createWorkersAI({ binding: this.env.AI });
 
     const result = streamText({
-     model: workersai("@cf/meta/llama-3.1-8b-instruct", {
+      model: workersai("@cf/meta/llama-3.1-8b-instruct", {
         sessionAffinity: this.sessionAffinity
       }),
       // 2. PERSONA: Making it a Security Research Assistant
